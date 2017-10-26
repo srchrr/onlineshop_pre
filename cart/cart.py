@@ -58,6 +58,7 @@ class Cart(object):
 
 
     def clear(self):
+        self.session['coupon_id'] = None
         self.session[settings.CART_SESSION_ID] = {}
         self.session.modified = True
 
